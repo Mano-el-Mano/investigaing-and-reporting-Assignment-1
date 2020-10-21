@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{minted}
+\usepackage{titletoc}
+\usepackage[toc,titletoc]{appendix}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{multirow}
+
+\begin{document}    
+    \section{Abstract}
+    This thesis is about ...
+    \tableofcontents
+    \section{Assignment dumb}
+    normal text
+    \paragraph{paragraph}
+     this is a paragraph
+    \subparagraph{subparagraph}
+    this is a subparagraph
+    \begin{figure}[!tbp]
+    	\centering
+    	\begin{minipage}[b]{0.4\textwidth}
+    		 \caption{caption above}
+    		 \label{marker}
+    		\includegraphics[width=\textwidth]{programming}
+    		\caption{caption below}
+    	\end{minipage}
+    	\hfill
+    	\begin{minipage}[b]{0.4\textwidth}
+´    		\includegraphics[width=\textwidth]{programming}
+    	\end{minipage}
+    \end{figure}
+\begin{itemize}
+	\item One entry in the list
+	\item Another entry in the list
+\end{itemize}
+
+\begin{enumerate}
+	\item The labels consists of sequential numbers.
+	\item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+\ref{marker} - image1 reference
+\pageref{marker} - pageref image
+
+\begin{minted}{python}
+from kafka import KafkaConsumer
+from json import loads
+
+consumer = KafkaConsumer(
+'numtest',
+bootstrap_servers=['localhost:9092'],
+auto_offset_reset='earliest',
+enable_auto_commit=True,
+group_id='my-group',
+value_deserializer=lambda x: loads(x.decode('utf-8')))
+
+for msg in consumer:
+message = msg.value
+print(f'message is {message}')
+\end{minted}
+
+\begin{center}
+	\begin{tabular}{ |c|c|c|c| } 
+		\hline
+		col1 & col2 & col3 \\
+		\hline
+		\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
+		& cell5 & cell6 \\ 
+		& cell8 & cell9 \\ 
+		\hline
+	\end{tabular}
+\end{center}
+
+This document is an example of BibTeX using in bibliography management. Three items 
+are cited: \textit{The \LaTeX\ Companion} book \cite{latexcompanion}, the Einstein
+journal paper \cite{einstein}, and the Donald Knuth's website \cite{knuthwebsite}. 
+The \LaTeX\ related items are \cite{latexcompanion,knuthwebsite}. 
+
+\medskip
+
+\bibliographystyle{unsrt}
+
+    \section{Introduction}
+    \subsection{Motivation}
+    \subsection{Related Work}
+    \section{Capabilities}
+    \subsection{Technologies}
+    \subsection{Development framework}
+    \section{Project}
+    \subsection{Complications}
+    \subsection{Architecture}
+    \subsection{Resolutions}
+    \subsection{Implementations}
+    \subsubsection{Integrations}
+    \subsubsection{Security measures}
+    \subsection{Networking}
+    \subsection{Communication}
+    \subsection{Data flow}
+    \section{Reflection}
+    \subsection{Development process}
+    \subsection{Infrastructure}
+    \section{Conclusion}
+    \section{References}
+    \bibliography{references}
+    \section{Appendix A}
+    
+\end{document}

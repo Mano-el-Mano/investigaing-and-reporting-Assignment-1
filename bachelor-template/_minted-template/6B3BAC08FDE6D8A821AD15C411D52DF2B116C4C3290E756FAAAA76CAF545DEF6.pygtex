@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{kafka} \PYG{k+kn}{import} \PYG{n}{KafkaConsumer}
+\PYG{k+kn}{from} \PYG{n+nn}{json} \PYG{k+kn}{import} \PYG{n}{loads}
+
+\PYG{n}{consumer} \PYG{o}{=} \PYG{n}{KafkaConsumer}\PYG{p}{(}
+\PYG{l+s+s1}{\PYGZsq{}numtest\PYGZsq{}}\PYG{p}{,}
+\PYG{n}{bootstrap\PYGZus{}servers}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}localhost:9092\PYGZsq{}}\PYG{p}{],}
+\PYG{n}{auto\PYGZus{}offset\PYGZus{}reset}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}earliest\PYGZsq{}}\PYG{p}{,}
+\PYG{n}{enable\PYGZus{}auto\PYGZus{}commit}\PYG{o}{=}\PYG{n+nb+bp}{True}\PYG{p}{,}
+\PYG{n}{group\PYGZus{}id}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}my\PYGZhy{}group\PYGZsq{}}\PYG{p}{,}
+\PYG{n}{value\PYGZus{}deserializer}\PYG{o}{=}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{loads}\PYG{p}{(}\PYG{n}{x}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)))}
+
+\PYG{k}{for} \PYG{n}{msg} \PYG{o+ow}{in} \PYG{n}{consumer}\PYG{p}{:}
+\PYG{n}{message} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{value}
+\PYG{k}{print}\PYG{p}{(}\PYG{n}{f}\PYG{l+s+s1}{\PYGZsq{}message is \PYGZob{}message\PYGZcb{}\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

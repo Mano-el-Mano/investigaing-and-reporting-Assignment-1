@@ -1,0 +1,28 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Abstract}{1}%
+\contentsline {section}{\numberline {2}Assignment dumb}{1}%
+\contentsline {paragraph}{paragraph}{1}%
+\contentsline {subparagraph}{subparagraph}{2}%
+\contentsline {section}{\numberline {3}Introduction}{3}%
+\contentsline {subsection}{\numberline {3.1}Motivation}{3}%
+\contentsline {subsection}{\numberline {3.2}Related Work}{3}%
+\contentsline {section}{\numberline {4}Capabilities}{3}%
+\contentsline {subsection}{\numberline {4.1}Technologies}{3}%
+\contentsline {subsection}{\numberline {4.2}Development framework}{3}%
+\contentsline {section}{\numberline {5}Project}{3}%
+\contentsline {subsection}{\numberline {5.1}Complications}{3}%
+\contentsline {subsection}{\numberline {5.2}Architecture}{3}%
+\contentsline {subsection}{\numberline {5.3}Resolutions}{3}%
+\contentsline {subsection}{\numberline {5.4}Implementations}{3}%
+\contentsline {subsubsection}{\numberline {5.4.1}Integrations}{3}%
+\contentsline {subsubsection}{\numberline {5.4.2}Security measures}{3}%
+\contentsline {subsection}{\numberline {5.5}Networking}{3}%
+\contentsline {subsection}{\numberline {5.6}Communication}{3}%
+\contentsline {subsection}{\numberline {5.7}Data flow}{3}%
+\contentsline {section}{\numberline {6}Reflection}{3}%
+\contentsline {subsection}{\numberline {6.1}Development process}{3}%
+\contentsline {subsection}{\numberline {6.2}Infrastructure}{3}%
+\contentsline {section}{\numberline {7}Conclusion}{3}%
+\contentsline {section}{\numberline {8}References}{3}%
+\contentsline {section}{\numberline {9}Appendix A}{4}%
+\contentsfinish 
